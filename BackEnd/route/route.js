@@ -3,6 +3,22 @@ const router = express.Router();
 
 const Employee = require("../model/employee.js");
 
+// Get
+router.get('/', (req, res)=>
+{
+    Employee.find((err, doc)=>
+    {
+        if(err)
+        {
+            console.log("Error in Get Data" +err);
+        }
+        else{
+            res.send(doc);
+        }
+
+    })
+})
+
 // post
 
 router.post('/', (req,res)=>
