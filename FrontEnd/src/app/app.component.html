@@ -1,0 +1,44 @@
+<div class="" style="background-color: #090c87;">
+  <h1 style="color: white;" class="text-center">EMPLOYEE FORM</h1>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container col-md-6" >
+  <form class="form p-4"style="background-color: #090c87;" #EmployeeSignup="ngForm" (ngSubmit)="employeeVerify()">
+    <div class="form-group">
+      <br>
+      <label for="ename" style="color: white;">Employee Name</label>
+      <br>
+      <input type="text" name="ename" id="ename" class="form-control" [(ngModel)]="Employee.ename" required pattern="^[A-za-z]+[ .]?[A-Za-z .]*">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="eposition" style="color: white;">Position</label>
+      <br>
+      <input type="text" name="eposition" id="eposition" class="form-control" [(ngModel)]="Employee.eposition" required>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="elocation" style="color: white;">Location</label>
+      <br>
+      <input type="text" name="elocation" id="elocation" class="form-control" [(ngModel)] = "Employee.elocation" required>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="esalary" style="color: white;">Salary</label>
+      <br>
+      <input type="number" name="esalary" id="esalary" class="form-control" [(ngModel)]="Employee.esalary" required pattern="^[1-9][0-9]+">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="text-center">
+    <button class="btn btn-light" [disabled] = "EmployeeSignup.form.invalid">Submit</button>
+  </div>
+  </form>
+</div>
